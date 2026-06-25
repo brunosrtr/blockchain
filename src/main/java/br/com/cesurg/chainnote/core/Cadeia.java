@@ -30,6 +30,18 @@ public class Cadeia {
         blocos.add(new Bloco(novoId, timestamp, dado, ultimo.getHashAtual(), hashAtual));
     }
 
+    public void adulterar(int id, Conteudo novoDado) {
+        Bloco original = blocos.get(id);
+        blocos.set(id, new Bloco(original.getId(), original.getTimestamp(), novoDado, original.getHashAnterior(), original.getHashAtual()));
+    }
+
+    public void carregar(List<Bloco> blocosCarregados) {
+        if (!blocosCarregados.isEmpty()) {
+            blocos.clear();
+            blocos.addAll(blocosCarregados);
+        }
+    }
+
     public List<Bloco> getBlocos() {
         return blocos;
     }

@@ -33,6 +33,6 @@ public class Bloco implements Serializable {
 
     @Override
     public String toString() {
-        return "[" + id + "] " + dado + " | hash: " + hashAtual;
+        return "[" + id + "] " + dado + " | hashAnterior: " + hashAnterior + " | hashAtual: " + hashAtual;
     }
 }
