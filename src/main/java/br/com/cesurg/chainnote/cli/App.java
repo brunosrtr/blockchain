@@ -15,7 +15,7 @@ public class App {
 
     static Cadeia cadeia = new Cadeia(new SHA256Hash());
     static ValidadorCadeia validador = new ValidadorCadeia(new SHA256Hash());
-    static RepositorioCadeia repositorio = new EmArquivoJson("cadeia.dat");
+    static RepositorioCadeia repositorio = new EmArquivoJson("cadeia.json");
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
