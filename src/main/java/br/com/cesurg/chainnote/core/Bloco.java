@@ -2,7 +2,9 @@ package br.com.cesurg.chainnote.core;
 
 import br.com.cesurg.chainnote.conteudo.Conteudo;
 
-public class Bloco {
+import java.io.Serializable;
+
+public class Bloco implements Serializable {
 
     private final int id;
     private final long timestamp;
