@@ -21,14 +21,14 @@ public class App {
     public static void main(String[] args) {
         int opcao;
         do {
-            System.out.println("\n=== ChainNote ===");
+            System.out.println("\n===| Blockchain |===");
             System.out.println("1. Adicionar nota de texto");
             System.out.println("2. Adicionar nota de imagem");
             System.out.println("3. Adicionar transacao");
             System.out.println("4. Listar cadeia");
             System.out.println("5. Salvar cadeia");
             System.out.println("6. Carregar cadeia");
-            System.out.println("7. Adulterar bloco");
+            System.out.println("7. Alterar bloco");
             System.out.println("0. Sair");
             System.out.print("Opcao: ");
             opcao = Integer.parseInt(scanner.nextLine());
