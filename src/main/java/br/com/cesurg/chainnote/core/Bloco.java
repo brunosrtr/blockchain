@@ -24,6 +24,11 @@ public class Bloco {
     public String getHashAnterior() { return hashAnterior; }
     public String getHashAtual() { return hashAtual; }
 
+    public String gerarEntradaParaHash() {
+        if (id == 0) return "genesis";
+        return id + "" + timestamp + dado.serializarParaHash() + hashAnterior;
+    }
+
     @Override
     public String toString() {
         return "[" + id + "] " + dado + " | hash: " + hashAtual;

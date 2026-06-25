@@ -23,9 +23,11 @@ public class Cadeia {
 
     public void adicionar(Conteudo dado) {
         Bloco ultimo = blocos.getLast();
-        String entrada = ultimo.getId() + 1 + System.currentTimeMillis() + dado.serializarParaHash() + ultimo.getHashAtual();
-        String hashAtual = calculadora.calcular(entrada);
-        blocos.add(new Bloco(blocos.size(), System.currentTimeMillis(), dado, ultimo.getHashAtual(), hashAtual));
+        long timestamp = System.currentTimeMillis();
+        int novoId = blocos.size();
+        Bloco novo = new Bloco(novoId, timestamp, dado, ultimo.getHashAtual(), "");
+        String hashAtual = calculadora.calcular(novo.gerarEntradaParaHash());
+        blocos.add(new Bloco(novoId, timestamp, dado, ultimo.getHashAtual(), hashAtual));
     }
 
     public List<Bloco> getBlocos() {
